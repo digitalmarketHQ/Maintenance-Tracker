@@ -1,0 +1,8 @@
+{
+  "name": "Meridian Heights Maintenance Tracker",
+  "description": "Facility maintenance management and repairs tracker for Meridian Heights International School, with roles for Director, Head of School, Facility Manager, and staff.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "entities": {
+    "MaintenanceRecord": {
+      "title": "MaintenanceRecord",
+      "description": "Represents a facility maintenance, repair or purchase record at Meridian Heights International School.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The unique ID of the record."
+        },
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "The date when the maintenance was done."
+        },
+        "department": {
+          "type": "string",
+          "description": "The department where the work was done."
+        },
+        "subject": {
+          "type": "string",
+          "description": "The specific item or subject of maintenance."
+        },
+        "details": {
+          "type": "string",
+          "description": "Details of the maintenance or repairs done or purchase done."
+        },
+        "description": {
+          "type": "string",
+          "description": "Additional descriptive notes."
+        },
+        "whoDidIt": {
+          "type": "string",
+          "description": "Who performed the maintenance or purchase."
+        },
+        "role": {
+          "type": "string",
+          "description": "Role of the person who logged it."
+        },
+        "cost": {
+          "type": "number",
+          "description": "Cost of the maintenance."
+        },
+        "proofName": {
+          "type": "string",
+          "description": "Name of the uploaded proof file."
+        },
+        "proofType": {
+          "type": "string",
+          "description": "Type of the uploaded proof file."
+        },
+        "proofData": {
+          "type": "string",
+          "description": "Base64 data or url of the proof file."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Pending", "Approved", "Rejected"],
+          "description": "Status of the maintenance record."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When this record was created."
+        }
+      },
+      "required": [
+        "id",
+        "date",
+        "department",
+        "subject",
+        "details",
+        "whoDidIt",
+        "cost",
+        "createdAt"
+      ]
+    }
+  },
+  "firestore": {
+    "maintenance_records/{recordId}": {
+      "schema": "MaintenanceRecord",
+      "description": "Collection of all school maintenance records."
+    }
+  }
+}
